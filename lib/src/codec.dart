@@ -147,7 +147,7 @@ Uint8List encodeFixedBytes(Uint8List v, int length) {
 
 Uint8List encodeBytes(Uint8List v) {
   var length = encodeInt(v.length);
-  var pad0s = 32 - v.length % 32;
+  var pad0s = ((v.length + 31) / 32).floor() * 32 - v.length;
   List<int> pads = [];
   for (var i = 0; i < pad0s; i++) pads.add(0);
   return Uint8List.fromList(length + v + pads);
