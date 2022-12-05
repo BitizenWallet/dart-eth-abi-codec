@@ -139,7 +139,7 @@ void main() {
       '000000000000000000000000aaf64bfcc32d0f15873a02163e7e500671a4ffcd'
     ]);
     expect((r1 as List).length, 2);
-    expect((r1 as List)[1], 'aaf64bfcc32d0f15873a02163e7e500671a4ffcd');
+    expect(r1[1], 'aaf64bfcc32d0f15873a02163e7e500671a4ffcd');
 
     var r2 = runDecode('address[]', [
       '0000000000000000000000000000000000000000000000000000000000000000'
@@ -154,14 +154,14 @@ void main() {
     ]);
 
     expect((r3 as List).length, 3);
-    expect((r3 as List)[1], BigInt.from(2));
+    expect(r3[1], BigInt.from(2));
 
     var r4 = runDecode('address[2]', [
       '000000000000000000000000d0a1e359811322d97991e03f863a0c30c2cf029c',
       '000000000000000000000000aaf64bfcc32d0f15873a02163e7e500671a4ffcd'
     ]);
     expect((r4 as List).length, 2);
-    expect((r4 as List)[1], 'aaf64bfcc32d0f15873a02163e7e500671a4ffcd');
+    expect(r4[1], 'aaf64bfcc32d0f15873a02163e7e500671a4ffcd');
   });
 
   test('relocate test', () {

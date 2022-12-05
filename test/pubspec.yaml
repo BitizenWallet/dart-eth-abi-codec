@@ -2,6 +2,9 @@ name: eth_abi_codec_test
 description: Test cases of eth_abi_codec lib
 publish_to: 'none'
 
+environment:
+  sdk: '>=2.10.0 <3.0.0'
+
 dependencies:
   json_annotation: ^3.0.0
   convert: ^2.1.1

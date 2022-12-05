@@ -5,15 +5,15 @@ import 'dart:typed_data';
 import 'abi.dart';
 
 class ContractCall {
-  String functionName;
-  Map<String, dynamic> callParams;
+  String? functionName;
+  Map<String?, dynamic>? callParams;
 
-  dynamic getCallParam(String paramName) => callParams[paramName];
+  dynamic getCallParam(String paramName) => callParams![paramName];
 
   ContractCall(this.functionName) :callParams = {};
 
-  void setCallParam(String key, dynamic value) {
-    callParams[key] = value;
+  void setCallParam(String? key, dynamic value) {
+    callParams![key] = value;
   }
 
   /// fromJson takes a Map<String, dynamic> as input
